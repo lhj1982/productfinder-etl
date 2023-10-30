@@ -7,8 +7,8 @@ node_modules
 .DS_Store
 **/*.nkf
 .env
-**/production.ts
-**/development.ts
+**/cntest.ts
+**/cnprod.ts
 
 # CDK asset staging directory
 .cdk.staging

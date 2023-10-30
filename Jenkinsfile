@@ -39,11 +39,11 @@ def config = [
     qma                  : [configFile: 'quality-config.yaml'],
     versionStrategy: 'packageJson',
     tags                 : [
-            'Name'                 : 'launch-productfinder-infra',
+            'Name'                 : 'launch-productfinder-etl',
             'classification'       : 'Bronze',
             'email': 'yan.zhou2@nike.com',
             'owner': 'launch',
-            'nike-application'     : 'launch-productfinder-infra',
+            'nike-application'     : 'launch-productfinder-etl',
             'nike-department'      : 'platform engineering - launch',
             'nike-domain'          : 'launch-productfinder',
     ],

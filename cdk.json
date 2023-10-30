@@ -1,5 +1,5 @@
 {
-    "app": "npx ts-node --prefer-ts-exts bin/productfinder-infra.ts",
+    "app": "npx ts-node --prefer-ts-exts bin/productfinder-etl.ts",
     "watch": {
         "include": [
             "**"
