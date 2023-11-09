@@ -93,7 +93,7 @@ export class ProductFinderETLStack extends Stack {
             // the properties below are optional
             description: 'Job for product finder ETL process',
             name: 'launch-productfinder-etl-trigger',
-            schedule: 'cron(01 17 * * ? *)',
+            schedule: 'cron(01 19 * * ? *)',
             startOnCreation: true,
             workflowName: cfnWorkflow.name,
         });
