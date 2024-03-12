@@ -25,21 +25,25 @@ AmazonGlueDataCatalog_node1697612316095 = glueContext.create_dynamic_frame.from_
 ChangeSchema_node1697612327197 = ApplyMapping.apply(
     frame=AmazonGlueDataCatalog_node1697612316095,
     mappings=[
-        ("isdiscounted", "boolean", "isdiscounted", "long"),
-        ("searchtime", "long", "searchtime", "string"),
-        ("quantity", "string", "quantity", "long"),
-        ("imageurl", "string", "imageurl", "string"),
-        ("currentprice", "long", "currentprice", "string"),
-        ("merchgroup", "string", "merchgroup", "boolean"),
-        ("currency", "string", "currency", "string"),
-        ("stylecolor", "string", "stylecolor", "string"),
-        ("status", "string", "status", "string"),
-        ("shihuoprice", "long", "shihuoprice", "string"),
-        ("shihuorepurchase", "string", "shihuorepurchase", "long"),
-        ("shihuomonthpurchase", "string", "shihuomonthpurchase", "string"),
-        ("shihuopurchasenumber", "string", "shihuopurchasenumber", "string"),
-    ],
-    transformation_ctx="ChangeSchema_node1697612327197",
+        ("isdiscounted", "boolean", "isdiscounted", "boolean"), 
+        ("searchtime", "long", "searchtime", "long"), 
+        ("imageurl", "string", "imageurl", "string"), 
+        ("currentprice", "long", "currentprice", "long"), 
+        ("merchgroup", "string", "merchgroup", "string"), 
+        ("currency", "string", "currency", "string"), 
+        ("stylecolor", "string", "stylecolor", "string"), 
+        ("status", "string", "status", "string"), 
+        ("shihuopurchasenumber", "string", "shihuopurchasenumber", "string"), 
+        ("shihuoprice", "long", "shihuoprice", "long"), 
+        ("shihuorepurchase", "string", "shihuorepurchase", "string"), 
+        ("shihuomonthpurchase", "string", "shihuomonthpurchase", "string"), 
+        ("name", "string", "name", "string"), 
+        ("stockxhighestprice", "long", "stockxhighestprice", "long"), 
+        ("releasedate", "string", "releasedate", "string"), 
+        ("stockxlowestprice", "long", "stockxlowestprice", "long"), 
+        ("retailprice", "long", "retailprice", "long"), 
+        ("quantity", "string", "quantity", "string")
+    ], transformation_ctx="ChangeSchema_node1710170306800"
 )
 
 # Script generated for node Drop Duplicates
