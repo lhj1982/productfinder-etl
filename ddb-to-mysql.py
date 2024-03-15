@@ -42,6 +42,7 @@ ChangeSchema_node1697612327197 = ApplyMapping.apply(
         ("releasedate", "string", "releasedate", "string"), 
         ("stockxlowestprice", "long", "stockxlowestprice", "long"), 
         ("retailprice", "long", "retailprice", "long"), 
+        ("lastsaleprice", "long", "lastsaleprice", "long"), 
         ("quantity", "string", "quantity", "string")
     ], transformation_ctx="ChangeSchema_node1710170306800"
 )
