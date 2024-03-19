@@ -26,11 +26,12 @@ TRUNCATE table product_catalog.product_prices ;
 
 insert into product_catalog.product_prices (product_id, price, retailprice, lastsaleprice, stockxlowestprice, stockxhighestprice, check_date) 
 select (select distinct id from product_catalog.products p where p.stylecolor =lpp.stylecolor ) as product_id , 
-lpp.shihuoprice as price , lpp.retailprice, lpp.lastsaleprice, lpp.stockxlowestprice, lpp.stockxhighestprice,   
+max(lpp.shihuoprice) as price , max(lpp.retailprice) as retailprice, max(lpp.lastsaleprice) as lastsaleprice, 
+max(lpp.stockxlowestprice) as stockxlowestprice, max(lpp.stockxhighestprice) as stockxhighestprice,   
 from_unixtime(lpp.searchtime div 1000 ,'%Y-%m-%d %h:%i:%s') as check_date 
 from launch_bot_users.launch_productfinder_products lpp 
 where (select 1 from product_catalog.products p2 where p2.stylecolor =lpp.stylecolor ) 
-group by lpp.shihuoprice, lpp.lastsaleprice, lpp.retailprice, lpp.stockxlowestprice, lpp.stockxhighestprice, lpp.searchtime , lpp.stylecolor;
+group by lpp.searchtime , lpp.stylecolor;
 ```
 
 Update product release date
